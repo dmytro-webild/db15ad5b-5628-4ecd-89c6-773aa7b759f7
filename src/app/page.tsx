@@ -2,10 +2,10 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { Sparkles, Zap, Star, Award } from 'lucide-react';
-import ContactText from '@/components/sections/contact/ContactText';
+import { Sparkles, Zap, Star, Award, MessageCircle } from 'lucide-react';
+import ContactCTA from '@/components/sections/contact/ContactCTA';
 import FeatureCardTwentySix from '@/components/sections/feature/FeatureCardTwentySix';
-import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
+import FooterMedia from '@/components/sections/footer/FooterMedia';
 import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll';
 import MetricSplitMediaAbout from '@/components/sections/about/MetricSplitMediaAbout';
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
@@ -32,7 +32,7 @@ export default function LandingPage() {
       navItems={[
         { name: "Home", id: "hero" },
         { name: "Collections", id: "features" },
-        { name: "New Arrivals", id: "arrivals" },
+        { name: "Showcase", id: "video-showcase" },
         { name: "About", id: "about" },
         { name: "Contact", id: "contact" },
       ]}
@@ -45,8 +45,19 @@ export default function LandingPage() {
       background={{ variant: "gradient-bars" }}
       title="Nabiha Collection"
       description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits tailored for the modern woman."
-      buttons={[{ text: "Shop Now", href: "#products" }]}
+      buttons={[{ text: "Shop Now", href: "#products" }, { text: "WhatsApp Order", href: "https://wa.me/923200387685" }]}
       imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
+    />
+  </div>
+
+  <div id="video-showcase" data-section="video-showcase">
+      <MetricSplitMediaAbout
+      useInvertedBackground={false}
+      title="Our Craft in Motion"
+      description="Watch our master artisans at work and see the fine details of our latest embroidery collections."
+      videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+      metrics={[]}
+      mediaAnimation="slide-up"
     />
   </div>
 
@@ -109,18 +120,24 @@ export default function LandingPage() {
   </div>
 
   <div id="contact" data-section="contact">
-      <ContactText
-      useInvertedBackground={true}
+      <ContactCTA
+      tag="Contact Us"
+      title="Get in Touch"
+      description="Have questions or need styling advice? We are here to help."
+      buttons={[{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }, { text: "Call Now", href: "tel:+923200387685" }]}
       background={{ variant: "gradient-bars" }}
-      text="Visit us in Karachi, Pakistan or call us at +92 320 0387685 for personalized styling advice."
+      useInvertedBackground={true}
     />
   </div>
 
   <div id="footer" data-section="footer">
-      <FooterLogoReveal
+      <FooterMedia
       logoText="Nabiha Collection"
-      leftLink={{ text: "Terms & Conditions", href: "#" }}
-      rightLink={{ text: "WhatsApp Support", href: "https://wa.me/923200387685" }}
+      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
+      columns={[
+        { title: "Quick Links", items: [{ label: "Collections", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
+        { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
+      ]}
     />
   </div>
       </ReactLenis>
