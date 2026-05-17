@@ -46,7 +46,7 @@ export default function LandingPage() {
       title="Nabiha Collection"
       description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits tailored for the modern woman."
       buttons={[{ text: "Shop Now", href: "#products" }]}
-      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
     />
   </div>
 
@@ -56,9 +56,9 @@ export default function LandingPage() {
       useInvertedBackground={false}
       features={[
         { title: "Handcrafted Detail", description: "Intricate embroidery work by master artisans.", buttonIcon: Sparkles, imageSrc: "http://img.b2bpic.net/free-photo/sideways-woman-posing-green-house_23-2148261255.jpg", imageAlt: "Sideways woman posing in a green house" },
-        { title: "Premium Lawn", description: "Ultra-soft premium lawn fabric for all seasons.", buttonIcon: Zap, imageSrc: "http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg", imageAlt: "Sideways woman posing in a green house" },
-        { title: "Gold Accents", description: "Elegant gold thread details for festive occasions.", buttonIcon: Star, imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg", imageAlt: "Sideways woman posing in a green house" },
-        { title: "Modern Cuts", description: "Contemporary silhouettes that feel timeless.", buttonIcon: Award, imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg", imageAlt: "Sideways woman posing in a green house" },
+        { title: "Premium Lawn", description: "Ultra-soft premium lawn fabric for all seasons.", buttonIcon: Zap, imageSrc: "http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=2", imageAlt: "Sideways woman posing in a green house" },
+        { title: "Gold Accents", description: "Elegant gold thread details for festive occasions.", buttonIcon: Star, imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=1", imageAlt: "Sideways woman posing in a green house" },
+        { title: "Modern Cuts", description: "Contemporary silhouettes that feel timeless.", buttonIcon: Award, imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg?_wi=1", imageAlt: "Sideways woman posing in a green house" },
       ]}
       title="Featured Embroidery"
       description="Exquisite craftsmanship meets sophisticated design in our new festive collection."
@@ -72,8 +72,8 @@ export default function LandingPage() {
       gridVariant="three-columns-all-equal-width"
       useInvertedBackground={true}
       products={[
-        { id: "1", name: "Royal Gold Suit", price: "PKR 8,500", imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg" },
-        { id: "2", name: "Midnight Lawn", price: "PKR 7,200", imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg" },
+        { id: "1", name: "Royal Gold Suit", price: "PKR 8,500", imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=2" },
+        { id: "2", name: "Midnight Lawn", price: "PKR 7,200", imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg?_wi=2" },
         { id: "3", name: "Beige Elegance", price: "PKR 6,900", imageSrc: "http://img.b2bpic.net/free-photo/young-woman-lying-yellow-cloth-nature_23-2148170289.jpg" },
       ]}
       title="Best Sellers"
