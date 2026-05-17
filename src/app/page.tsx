@@ -46,7 +46,7 @@ export default function LandingPage() {
       title="Nabiha Collection"
       description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits tailored for the modern woman."
       buttons={[{ text: "Shop Now", href: "#products" }, { text: "WhatsApp Order", href: "https://wa.me/923200387685" }]}
-      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
+      imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3DhmeqNYcKFk9iaiQabHUYs5vAe/uploaded-1779017205062-palci8t4.png"
     />
   </div>
 
