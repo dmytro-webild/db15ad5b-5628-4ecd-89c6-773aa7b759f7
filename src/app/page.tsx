@@ -67,7 +67,7 @@ export default function LandingPage() {
           href: "#products",
         },
       ]}
-      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg"
+      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
     />
   </div>
 
@@ -87,21 +87,21 @@ export default function LandingPage() {
           title: "Premium Lawn",
           description: "Ultra-soft premium lawn fabric for all seasons.",
           buttonIcon: "Zap",
-          imageSrc: "http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=2",
           imageAlt: "Sideways woman posing in a green house",
         },
         {
           title: "Gold Accents",
           description: "Elegant gold thread details for festive occasions.",
           buttonIcon: "Star",
-          imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=1",
           imageAlt: "Sideways woman posing in a green house",
         },
         {
           title: "Modern Cuts",
           description: "Contemporary silhouettes that feel timeless.",
           buttonIcon: "Award",
-          imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg?_wi=1",
           imageAlt: "Sideways woman posing in a green house",
         },
       ]}
@@ -121,13 +121,13 @@ export default function LandingPage() {
           id: "1",
           name: "Royal Gold Suit",
           price: "PKR 8,500",
-          imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=2",
         },
         {
           id: "2",
           name: "Midnight Lawn",
           price: "PKR 7,200",
-          imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg",
+          imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg?_wi=2",
         },
         {
           id: "3",
