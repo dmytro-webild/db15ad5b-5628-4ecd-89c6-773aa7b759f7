@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
 import { Sparkles, Zap, Star, Award, MessageCircle } from 'lucide-react';
 import ContactCTA from '@/components/sections/contact/ContactCTA';
-import FeatureCardTwentySix from '@/components/sections/feature/FeatureCardTwentySix';
+import FeatureCardTwentyEight from '@/components/sections/feature/FeatureCardTwentyEight';
 import FooterMedia from '@/components/sections/footer/FooterMedia';
 import HeroSplit from '@/components/sections/hero/HeroSplit';
 import MetricSplitMediaAbout from '@/components/sections/about/MetricSplitMediaAbout';
@@ -63,14 +63,15 @@ export default function LandingPage() {
   </div>
 
   <div id="features" data-section="features">
-      <FeatureCardTwentySix
+      <FeatureCardTwentyEight
+      animationType="slide-up"
       textboxLayout="default"
       useInvertedBackground={false}
       features={[
-        { title: "Handcrafted Detail", description: "Intricate embroidery work by master artisans.", buttonIcon: Sparkles, imageSrc: "http://img.b2bpic.net/free-photo/sideways-woman-posing-green-house_23-2148261255.jpg", imageAlt: "Sideways woman posing in a green house" },
-        { title: "Premium Lawn", description: "Ultra-soft premium lawn fabric for all seasons.", buttonIcon: Zap, imageSrc: "http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=2", imageAlt: "Sideways woman posing in a green house" },
-        { title: "Gold Accents", description: "Elegant gold thread details for festive occasions.", buttonIcon: Star, imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=1", imageAlt: "Sideways woman posing in a green house" },
-        { title: "Modern Cuts", description: "Contemporary silhouettes that feel timeless.", buttonIcon: Award, imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg?_wi=1", imageAlt: "Sideways woman posing in a green house" },
+        { id: "1", title: "Handcrafted Detail", subtitle: "Premium Quality", category: "Embroidery", value: "Masterpiece" },
+        { id: "2", title: "Premium Lawn", subtitle: "Soft Feel", category: "Fabric", value: "Comfort" },
+        { id: "3", title: "Gold Accents", subtitle: "Festive Shine", category: "Details", value: "Luxury" },
+        { id: "4", title: "Modern Cuts", subtitle: "Tailored Fit", category: "Design", value: "Contemporary" },
       ]}
       title="Featured Embroidery"
       description="Exquisite craftsmanship meets sophisticated design in our new festive collection."
