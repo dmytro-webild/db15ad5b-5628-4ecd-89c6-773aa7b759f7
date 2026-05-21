@@ -6,7 +6,7 @@ import { Sparkles, Zap, Star, Award, MessageCircle } from 'lucide-react';
 import ContactCTA from '@/components/sections/contact/ContactCTA';
 import FeatureCardTwentySix from '@/components/sections/feature/FeatureCardTwentySix';
 import FooterMedia from '@/components/sections/footer/FooterMedia';
-import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll';
+import HeroSplit from '@/components/sections/hero/HeroSplit';
 import MetricSplitMediaAbout from '@/components/sections/about/MetricSplitMediaAbout';
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
 import ProductCardThree from '@/components/sections/product/ProductCardThree';
@@ -41,12 +41,13 @@ export default function LandingPage() {
   </div>
 
   <div id="hero" data-section="hero">
-      <HeroBillboardScroll
+      <HeroSplit
       background={{ variant: "gradient-bars" }}
       title="Nabiha Collection"
       description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits tailored for the modern woman."
       buttons={[{ text: "Shop Now", href: "#products" }, { text: "WhatsApp Order", href: "https://wa.me/923200387685" }]}
       imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3DhmeqNYcKFk9iaiQabHUYs5vAe/uploaded-1779017205062-palci8t4.png"
+      imagePosition="right"
     />
   </div>
 
