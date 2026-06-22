@@ -124,7 +124,6 @@ export default function LandingPage() {
       <ContactCTA
       title="Contact Us"
       description="Get in touch with us for queries."
-      background="solid"
       useInvertedBackground={false}
       tag="Contact Us"
       buttons={[{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }, { text: "Call Now", href: "tel:+923200387685" }]}
@@ -132,7 +131,7 @@ export default function LandingPage() {
   </div>
 
   <div id="footer" data-section="footer">
-      <FooterMedia />
+      <FooterMedia brandName="Nabiha Collection" />
   </div>
       </ReactLenis>
     </ThemeProvider>
