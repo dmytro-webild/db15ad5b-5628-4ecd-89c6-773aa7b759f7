@@ -116,22 +116,30 @@ export default function LandingPage() {
       ]}
       kpiItems={[{ value: "4.9", label: "Rating" }, { value: "99%", label: "Satisfaction" }, { value: "24/7", label: "Support" }]}
       title="What Our Clients Say"
-      description="Real feedback from our valued customers."
+      description="Experience of elegance through our customers' eyes."
     />
   </div>
 
   <div id="contact" data-section="contact">
       <ContactCTA
-      title="Contact Us"
-      description="Get in touch with us for queries."
-      useInvertedBackground={false}
       tag="Contact Us"
+      title="Get in Touch"
+      description="Have questions or need styling advice? We are here to help."
       buttons={[{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }, { text: "Call Now", href: "tel:+923200387685" }]}
+      background={{ variant: "gradient-bars" }}
+      useInvertedBackground={true}
     />
   </div>
 
   <div id="footer" data-section="footer">
-      <FooterMedia brandName="Nabiha Collection" />
+      <FooterMedia
+      logoText="Nabiha Collection"
+      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
+      columns={[
+        { title: "Quick Links", items: [{ label: "Collections", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
+        { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
+      ]}
+    />
   </div>
       </ReactLenis>
     </ThemeProvider>
