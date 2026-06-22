@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
+import { ShieldCheck, ArrowLeftRight, Truck } from "lucide-react";
 import ContactCTA from '@/components/sections/contact/ContactCTA';
 import FeatureCardTwentyEight from '@/components/sections/feature/FeatureCardTwentyEight';
 import FooterMedia from '@/components/sections/footer/FooterMedia';
@@ -10,6 +11,7 @@ import MetricSplitMediaAbout from '@/components/sections/about/MetricSplitMediaA
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
 import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import TestimonialCardSixteen from '@/components/sections/testimonial/TestimonialCardSixteen';
+import MetricsIconCards from '@/components/sections/metrics/MetricsIconCards';
 
 export default function LandingPage() {
   return (
@@ -47,6 +49,19 @@ export default function LandingPage() {
       buttons={[{ text: "Shop Now", href: "#products" }, { text: "WhatsApp Order", href: "https://wa.me/923200387685" }]}
       imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3DhmeqNYcKFk9iaiQabHUYs5vAe/uploaded-1779017205062-palci8t4.png"
       imagePosition="right"
+    />
+  </div>
+
+  <div id="trust-signals" data-section="trust-signals">
+    <MetricsIconCards
+      tag="Our Commitment"
+      title="Why Shop With Us"
+      description="We prioritize your shopping experience with peace of mind."
+      metrics={[
+        { icon: "ShieldCheck", title: "Secure Payment", value: "Protected" },
+        { icon: "ArrowLeftRight", title: "Easy Returns", value: "Flexible" },
+        { icon: "Truck", title: "Worldwide Shipping", value: "Global" }
+      ]}
     />
   </div>
 
