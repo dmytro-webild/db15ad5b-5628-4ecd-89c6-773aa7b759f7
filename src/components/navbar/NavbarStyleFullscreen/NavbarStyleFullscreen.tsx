@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 
 interface NavItem {
   name: string;
@@ -15,31 +16,29 @@ export default function NavbarStyleFullscreen({ navItems, brandName }: NavbarPro
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between p-6 bg-transparent w-full">
-      <Link href="/" className="text-2xl font-bold">
-        {brandName}
-      </Link>
-
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-6 bg-transparent">
+      <div className="text-2xl font-bold tracking-tight">{brandName}</div>
       <button 
-        className="z-50 block md:hidden"
         onClick={() => setIsOpen(!isOpen)}
+        className="p-2 z-50"
+        aria-label="Toggle Menu"
       >
-        {isOpen ? 'Close' : 'Menu'}
+        {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
-
-      <div 
-        className={`fixed inset-0 flex flex-col items-center justify-center gap-8 bg-white/95 transition-all duration-300 md:static md:flex md:flex-row md:bg-transparent ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible md:opacity-100 md:visible'}`}>
-        {navItems.map((item) => (
-          <Link 
-            key={item.name} 
-            href={item.href} 
-            className="text-2xl md:text-lg font-medium"
-            onClick={() => setIsOpen(false)}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
+      {isOpen && (
+        <div className="fixed inset-0 bg-background flex flex-col justify-center items-center gap-8 z-40">
+          {navItems.map((item) => (
+            <Link 
+              key={item.name} 
+              href={item.href} 
+              onClick={() => setIsOpen(false)}
+              className="text-4xl font-light hover:underline"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
