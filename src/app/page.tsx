@@ -29,11 +29,11 @@ export default function LandingPage() {
   <div id="nav" data-section="nav">
       <NavbarStyleFullscreen
       navItems={[
-        { name: "Home", id: "hero" },
-        { name: "Collections", id: "features" },
-        { name: "Showcase", id: "video-showcase" },
-        { name: "About", id: "about" },
-        { name: "Contact", id: "contact" },
+        { name: "Home", href: "#hero" },
+        { name: "Collections", href: "#features" },
+        { name: "Showcase", href: "#video-showcase" },
+        { name: "About", href: "#about" },
+        { name: "Contact", href: "#contact" },
       ]}
       brandName="Nabiha Collection"
     />
@@ -144,4 +144,9 @@ export default function LandingPage() {
       </ReactLenis>
     </ThemeProvider>
   );
+}
+"
+    }
+  ],
+  "rawPlan": "I have updated the navigation links to ensure all menu items and buttons correctly reference the intended section anchors or external URLs. Navigation items now use 'href' keys to ensure they are functional."
 }
