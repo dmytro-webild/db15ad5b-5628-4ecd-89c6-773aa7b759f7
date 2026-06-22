@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { ShieldCheck, Package, RotateCcw, Award, Sparkles } from "lucide-react";
+import { ShieldCheck, Award, Sparkles } from "lucide-react";
 import NavbarFullscreen from '@/components/ui/NavbarFullscreen';
 import HeroBillboardCreator from '@/components/sections/hero/HeroBillboardCreator';
 import FeaturesGridSplit from '@/components/sections/features/FeaturesGridSplit';
@@ -27,7 +27,7 @@ export default function LandingPage() {
         headingFontWeight="extrabold"
     >
       <ReactLenis root>
-        <div id="nav" data-section="nav">
+        <div id="nav" data-section="nav" data-webild-component="NavbarFullscreen" data-webild-component-path="@/components/ui/NavbarFullscreen">
           <NavbarFullscreen
             logo="Nabiha Collection"
             navItems={[
@@ -40,7 +40,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="hero" data-section="hero">
+        <div id="hero" data-section="hero" data-webild-component="HeroBillboardCreator" data-webild-component-path="@/components/sections/hero/HeroBillboardCreator">
           <HeroBillboardCreator
             tag="Premium Quality"
             title="Nabiha"
@@ -53,7 +53,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="trust-banner" data-section="features" data-webild-component="FeaturesLogos" data-webild-component-path="@/components/sections/features/FeaturesLogos">
+        <div id="trust-banner" data-section="trust-banner" data-webild-component="FeaturesLogos" data-webild-component-path="@/components/sections/features/FeaturesLogos">
           <FeaturesLogos
             title="Confidence Guaranteed"
             items={[
@@ -64,7 +64,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="features" data-section="features">
+        <div id="features" data-section="features" data-webild-component="FeaturesGridSplit" data-webild-component-path="@/components/sections/features/FeaturesGridSplit">
           <FeaturesGridSplit
             tag="Our Features"
             title="Why Choose Us"
@@ -80,7 +80,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="products" data-section="products">
+        <div id="products" data-section="products" data-webild-component="FeaturesRevealCardsBento" data-webild-component-path="@/components/sections/features/FeaturesRevealCardsBento">
           <FeaturesRevealCardsBento
             tag="Catalogue"
             title="Product Categories"
@@ -92,7 +92,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="testimonials" data-section="testimonials">
+        <div id="testimonials" data-section="testimonials" data-webild-component="TestimonialDetailedCards" data-webild-component-path="@/components/sections/testimonial/TestimonialDetailedCards">
           <TestimonialDetailedCards
             tag="Testimonials"
             title="What Our Clients Say"
@@ -103,7 +103,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="contact" data-section="contact">
+        <div id="contact" data-section="contact" data-webild-component="ContactSplitForm" data-webild-component-path="@/components/sections/contact/ContactSplitForm">
           <ContactSplitForm
             tag="Connect"
             title="Get in Touch"
@@ -114,7 +114,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="footer" data-section="footer">
+        <div id="footer" data-section="footer" data-webild-component="FooterSimple" data-webild-component-path="@/components/sections/footer/FooterSimple">
           <FooterSimple
             brand="Nabiha Collection"
             columns={[{ title: "Links", items: [{ label: "Shop", href: "#products" }, { label: "About", href: "#about" }] }]}
