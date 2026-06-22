@@ -47,9 +47,7 @@ export default function LandingPage() {
             titleHighlight="Collection"
             description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits."
             primaryButton={{ text: "Shop Now", href: "#products" }}
-            note="Free delivery on orders over PKR 10,000"
-            badgeText="New Arrivals"
-            videos={[]}
+            items={[]}
           />
         </div>
 
