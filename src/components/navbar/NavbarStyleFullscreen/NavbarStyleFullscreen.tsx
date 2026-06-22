@@ -1,165 +1,46 @@
-"use client";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
-import { useState, useEffect, useCallback } from "react";
-import { ReactLenis, useLenis } from "lenis/react";
-import Logo from "../Logo";
-import HamburgerButton from "../HamburgerButton";
-import Button from "@/components/button/Button";
-import { NavItem } from "@/types/navigation";
-import { cls } from "@/lib/utils";
-import { getButtonProps } from "@/lib/buttonUtils";
-import { useButtonClick } from "@/components/button/useButtonClick";
-import { useTheme } from "@/providers/themeProvider/ThemeProvider";
-import type { ButtonConfig } from "@/types/button";
-import "./NavbarStyleFullscreen.css";
-
-interface NavLinkProps {
-  item: NavItem;
-  onClose: () => void;
+interface NavItem {
+  name: string;
+  href: string;
+  id?: string;
 }
-
-const NavLink = ({ item, onClose }: NavLinkProps) => {
-  const handleClick = useButtonClick(item.id, onClose);
-
-  return (
-    <button
-      type="button"
-      className="navbar-fullscreen__link text-background font-normal leading-[1.15] no-underline text-9xl bg-transparent border-none cursor-pointer"
-      onClick={handleClick}
-    >
-      <span className="navbar-fullscreen__link-text block relative">{item.name}</span>
-    </button>
-  );
-};
 
 interface NavbarStyleFullscreenProps {
   navItems: NavItem[];
-  logoSrc?: string;
-  logoAlt?: string;
-  brandName?: string;
-  bottomLeftText?: string;
-  bottomRightText?: string;
-  topBarClassName?: string;
-  button?: ButtonConfig;
-  buttonClassName?: string;
-  buttonTextClassName?: string;
-  logoClassName?: string;
-  logoImageClassName?: string;
+  brandName: string;
 }
 
-const NavbarStyleFullscreen = ({
-  navItems,
-  logoSrc,
-  logoAlt = "",
-  brandName = "Webild",
-  bottomLeftText = "Global Community",
-  bottomRightText = "hello@example.com",
-  topBarClassName = "",
-  button,
-  buttonClassName = "",
-  buttonTextClassName = "",
-  logoClassName = "",
-  logoImageClassName = "",
-}: NavbarStyleFullscreenProps) => {
-  const [isActive, setIsActive] = useState(false);
-  const theme = useTheme();
-  const lenis = useLenis();
-
-  const handleToggle = useCallback(() => {
-    setIsActive((prev) => !prev);
-  }, []);
-
-  const handleClose = useCallback(() => {
-    setIsActive(false);
-  }, []);
-
-  useEffect(() => {
-    if (lenis) {
-      if (isActive) {
-        lenis.stop();
-      } else {
-        lenis.start();
-      }
-    }
-  }, [isActive, lenis]);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isActive) {
-        setIsActive(false);
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isActive]);
+export default function NavbarStyleFullscreen({ navItems, brandName }: NavbarStyleFullscreenProps) {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav
-      role="navigation"
-      aria-label="Main navigation"
-      data-navigation-status={isActive ? "active" : "not-active"}
-      className="fixed inset-0 z-[100] pointer-events-none"
-    >
-      <div className={cls(
-        "absolute z-1 w-content-width left-1/2 -translate-x-1/2 top-6 flex justify-between items-center pointer-events-auto",
-        topBarClassName
-      )}>
-        <Logo
-          brandName={brandName}
-          logoSrc={logoSrc}
-          logoAlt={logoAlt}
-          className={logoClassName}
-          imageClassName={logoImageClassName}
-          textClassName={`transition-colors duration-700 ease-[cubic-bezier(0.5,0.5,0,1)] ${isActive ? "text-background" : "text-foreground"}`}
-          href="/"
-        />
-        <div className="flex items-center gap-3">
-          {button && (
-            <Button
-              {...getButtonProps(
-                button,
-                0,
-                theme.defaultButtonVariant,
-                buttonClassName,
-                buttonTextClassName
-              )}
-            />
-          )}
-          <HamburgerButton
-              isActive={isActive}
-              onClick={handleToggle}
-              {...(button && {
-                activeBarClassName: "bg-foreground",
-                inactiveBarClassName: "bg-foreground",
-                styled: true
-              })}
-            />
-        </div>
-      </div>
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6">
+      <div className="text-2xl font-bold tracking-tighter">{brandName}</div>
 
-      <div
-        id="navigation-menu"
-        className="navbar-fullscreen__tile pointer-events-auto bg-foreground backdrop-blur absolute inset-0 flex flex-col justify-center items-center overflow-hidden"
-      >
-        <ReactLenis className="overflow-y-auto max-h-[70vh] mask-fade-y py-8">
-          <ul className="navbar-fullscreen__ul flex flex-col items-center m-0 p-0 list-none">
-            {navItems.map((item) => (
-              <li key={item.id} className="navbar-fullscreen__li flex justify-center items-center m-0 p-0 relative overflow-hidden">
-                <NavLink item={item} onClose={handleClose} />
+      <button onClick={() => setIsOpen(!isOpen)} className="z-50 p-2">
+        {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+      </button>
+
+      {isOpen && (
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-background">
+          <ul className="flex flex-col items-center gap-8 text-4xl font-light">
+            {navItems.map((item, index) => (
+              <li key={`${item.id ?? 'nav'}-${index}`}>
+                <Link
+                  to={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="hover:text-accent transition-colors"
+                >
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
-        </ReactLenis>
-
-        <div className="absolute bottom-0 w-content-width left-1/2 -translate-x-1/2 flex justify-between items-center py-10">
-          <p className="text-background/50 mb-0 text-base relative">{bottomLeftText}</p>
-          <p className="text-background/50 mb-0 text-base relative">{bottomRightText}</p>
         </div>
-      </div>
+      )}
     </nav>
   );
-};
-
-
-export default NavbarStyleFullscreen;
+}
