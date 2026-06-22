@@ -58,7 +58,7 @@ export default function LandingPage() {
             title="Why Choose Us"
             description="Exquisite craftsmanship combined with modern design aesthetics."
             topItems={[
-              { title: "Handcrafted", description: "Premium embroidery detailing", imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg" },
+              { title: "Handcrafted", description: "Premium embroidery detailing", imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=1" },
               { title: "Lawn Comfort", description: "High quality breathable fabric", imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg" }
             ]}
             bottomItem={{
@@ -75,7 +75,7 @@ export default function LandingPage() {
             description="Explore our curated collection of festive lawn outfits."
             items={Array(7).fill(0).map((_, i) => ({
               title: `Category ${i+1}`,
-              description: "Premium embroidery design",              href: "#contact",              imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg"
+              description: "Premium embroidery design",              href: "#contact",              imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=2"
             }))}
           />
         </div>
