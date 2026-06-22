@@ -122,18 +122,17 @@ export default function LandingPage() {
 
   <div id="contact" data-section="contact">
       <ContactCTA
+      title="Contact Us"
+      description="Get in touch with us for queries."
+      background="solid"
+      useInvertedBackground={false}
       tag="Contact Us"
       buttons={[{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }, { text: "Call Now", href: "tel:+923200387685" }]}
     />
   </div>
 
   <div id="footer" data-section="footer">
-      <FooterMedia
-      socialLinks={[
-        { icon: "Instagram", href: "https://instagram.com/nabihacollection" },
-        { icon: "Facebook", href: "https://facebook.com/nabihacollection" }
-      ]}
-    />
+      <FooterMedia />
   </div>
       </ReactLenis>
     </ThemeProvider>
