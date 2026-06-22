@@ -90,7 +90,7 @@ export default function LandingPage() {
             ]}
             bottomItem={{
               title: "Follow us on Instagram",              description: "Join our community for styling inspiration and new drops.",              primaryButton: { text: "Follow @nabiha", href: "#" },
-              imageSrc: "http://img.b2bpic.net/free-photo/business-owners-preparing-their-store_23-2149300867.jpg?_wi=1"
+              imageSrc: "http://img.b2bpic.net/free-photo/business-owners-preparing-their-store_23-2149300867.jpg"
             }}
           />
         </div>
@@ -114,7 +114,7 @@ export default function LandingPage() {
             description="Reach out to our styling consultants for orders and inquiries."
             inputs={[{ name: "name", type: "text", placeholder: "Name" }, { name: "email", type: "email", placeholder: "Email" }, { name: "message", type: "text", placeholder: "How can we help?" }]}
             buttonText="Send Inquiry"
-            imageSrc="http://img.b2bpic.net/free-photo/business-owners-preparing-their-store_23-2149300867.jpg?_wi=2"
+            imageSrc="http://img.b2bpic.net/free-photo/business-owners-preparing-their-store_23-2149300867.jpg"
           />
         </div>
 
