@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { ShieldCheck, Package, RotateCcw, Award, Sparkles } from "lucide-react";
+import { ShieldCheck, Package, RotateCcw } from "lucide-react";
 import NavbarFullscreen from '@/components/ui/NavbarFullscreen';
 import HeroBillboardCreator from '@/components/sections/hero/HeroBillboardCreator';
 import AboutTestimonial from '@/components/sections/about/AboutTestimonial';
@@ -54,13 +54,13 @@ export default function LandingPage() {
           />
         </div>
 
-        <div id="trust-banner" data-section="features" data-webild-component="FeaturesLogos" data-webild-component-path="@/components/sections/features/FeaturesLogos">
+        <div id="trust-signals" data-section="features" data-webild-component="FeaturesLogos" data-webild-component-path="@/components/sections/features/FeaturesLogos">
           <FeaturesLogos
-            title="Confidence Guaranteed"
+            title="Why Shop With Us"
             items={[
-                { icon: Award, title: "Quality Assured", description: "Premium materials only" },
-                { icon: ShieldCheck, title: "30-Day Guarantee", description: "Love it or return it" },
-                { icon: Sparkles, title: "Artisan Craft", description: "Hand-embroidered detail" }
+                { icon: ShieldCheck, title: "Secure Payments", description: "Shop with confidence" },
+                { icon: Package, title: "100% Original", description: "Authentic luxury fabrics" },
+                { icon: RotateCcw, title: "Easy Returns", description: "Hassle-free exchange policy" }
             ]}
           />
         </div>
