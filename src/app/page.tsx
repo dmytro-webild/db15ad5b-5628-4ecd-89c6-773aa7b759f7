@@ -30,8 +30,7 @@ export default function LandingPage() {
       <NavbarStyleFullscreen
       navItems={[
         { name: "Home", href: "#hero" },
-        { name: "Collections", href: "#features" },
-        { name: "Showcase", href: "#video-showcase" },
+        { name: "Products", href: "#products" },
         { name: "About", href: "#about" },
         { name: "Contact", href: "#contact" },
       ]}
@@ -136,7 +135,7 @@ export default function LandingPage() {
       logoText="Nabiha Collection"
       imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
       columns={[
-        { title: "Quick Links", items: [{ label: "Collections", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
+        { title: "Quick Links", items: [{ label: "Products", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
         { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
       ]}
     />
