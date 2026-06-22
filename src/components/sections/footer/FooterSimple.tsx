@@ -1,69 +1,27 @@
-"use client";
-
-import FooterColumns from "@/components/shared/FooterColumns";
-import { cls } from "@/lib/utils";
-import type { FooterColumn } from "@/components/shared/FooterColumns";
+import React from 'react';
 
 interface FooterSimpleProps {
-  columns: FooterColumn[];
-  bottomLeftText: string;
-  bottomRightText: string;
-  ariaLabel?: string;
-  className?: string;
-  containerClassName?: string;
-  columnsClassName?: string;
-  columnClassName?: string;
-  columnTitleClassName?: string;
-  columnItemClassName?: string;
-  dividerClassName?: string;
-  bottomContainerClassName?: string;
-  bottomLeftTextClassName?: string;
-  bottomRightTextClassName?: string;
+  brand: string;
+  columns: { title: string; items: { label: string; href?: string }[] }[];
+  copyright: string;
+  links: { label: string; href: string }[];
 }
 
-const FooterSimple = ({
-  columns,
-  bottomLeftText,
-  bottomRightText,
-  ariaLabel = "Site footer",
-  className = "",
-  containerClassName = "",
-  columnsClassName = "",
-  columnClassName = "",
-  columnTitleClassName = "",
-  columnItemClassName = "",
-  dividerClassName = "",
-  bottomContainerClassName = "",
-  bottomLeftTextClassName = "",
-  bottomRightTextClassName = "",
-}: FooterSimpleProps) => {
+const FooterSimple: React.FC<FooterSimpleProps> = ({ brand, columns, copyright, links }) => {
   return (
-    <footer
-      role="contentinfo"
-      aria-label={ariaLabel}
-      className={cls("relative w-full pt-20 pb-10", className)}
-    >
-      <div className={cls("w-content-width mx-auto", containerClassName)}>
-        <FooterColumns
-          columns={columns}
-          className={cls("w-full! justify-between mb-10", columnsClassName)}
-          columnClassName={columnClassName}
-          columnTitleClassName={columnTitleClassName}
-          columnItemClassName={columnItemClassName}
-        />
-        <div
-          className={cls("w-full h-px bg-foreground/20", dividerClassName)}
-        />
-        <div
-          className={cls("w-full flex items-center justify-between pt-6", bottomContainerClassName)}
-        >
-          <p className={cls("text-foreground/50 text-sm", bottomLeftTextClassName)}>
-            {bottomLeftText}
-          </p>
-          <p className={cls("text-foreground/50 text-sm", bottomRightTextClassName)}>
-            {bottomRightText}
-          </p>
-        </div>
+    <footer className="py-12 border-t text-center">
+      <h3 className="font-bold text-lg mb-6">{brand}</h3>
+      <div className="flex justify-center gap-12 mb-8">
+        {columns.map((c, idx) => (
+          <div key={idx}>
+            <h4 className="font-bold mb-2">{c.title}</h4>
+            {c.items.map((i, k) => <a key={k} href={i.href} className="block text-sm">{i.label}</a>)}
+          </div>
+        ))}
+      </div>
+      <p className="text-xs">{copyright}</p>
+      <div className="flex justify-center gap-4 mt-4">
+        {links.map((l, idx) => <a key={idx} href={l.href} className="text-xs underline">{l.label}</a>)}
       </div>
     </footer>
   );
