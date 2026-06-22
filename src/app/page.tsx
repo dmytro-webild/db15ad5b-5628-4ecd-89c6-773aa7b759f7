@@ -116,28 +116,26 @@ export default function LandingPage() {
       ]}
       kpiItems={[{ value: "4.9", label: "Rating" }, { value: "99%", label: "Satisfaction" }, { value: "24/7", label: "Support" }]}
       title="What Our Clients Say"
-      description="Experience of elegance through our customers' eyes."
+      description="Real feedback from our valued customers."
     />
   </div>
 
   <div id="contact" data-section="contact">
       <ContactCTA
       tag="Contact Us"
-      title="Get in Touch"
-      description="Have questions or need styling advice? We are here to help."
-      buttons={[{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }, { text: "Call Now", href: "tel:+923200387685" }]}
-      background={{ variant: "gradient-bars" }}
-      useInvertedBackground={true}
+      text="Get in Touch"
+      primaryButton={{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }}
+      secondaryButton={{ text: "Call Now", href: "tel:+923200387685" }}
     />
   </div>
 
   <div id="footer" data-section="footer">
       <FooterMedia
-      logoText="Nabiha Collection"
-      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
-      columns={[
-        { title: "Quick Links", items: [{ label: "Collections", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
-        { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
+      brand="Nabiha Collection"
+      copyright="© 2024 Nabiha Collection. All rights reserved."
+      socialLinks={[
+        { icon: "Instagram", href: "https://instagram.com/nabihacollection" },
+        { icon: "Facebook", href: "https://facebook.com/nabihacollection" }
       ]}
     />
   </div>
