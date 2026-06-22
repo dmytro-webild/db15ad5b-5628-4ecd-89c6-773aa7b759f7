@@ -2,7 +2,6 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { Sparkles, Zap, Star, Award, MessageCircle } from 'lucide-react';
 import ContactCTA from '@/components/sections/contact/ContactCTA';
 import FeatureCardTwentyEight from '@/components/sections/feature/FeatureCardTwentyEight';
 import FooterMedia from '@/components/sections/footer/FooterMedia';
@@ -91,6 +90,7 @@ export default function LandingPage() {
       ]}
       title="Best Sellers"
       description="Explore our top-rated festive outfits."
+      primaryButton={{ text: "View All", href: "#products" }}
     />
   </div>
 
@@ -139,6 +139,11 @@ export default function LandingPage() {
       columns={[
         { title: "Quick Links", items: [{ label: "Collections", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
         { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
+      ]}
+      socialLinks={[
+        { icon: "Facebook", href: "https://facebook.com/nabiha-collection" },
+        { icon: "Instagram", href: "https://instagram.com/nabiha-collection" },
+        { icon: "WhatsApp", href: "https://wa.me/923200387685" }
       ]}
     />
   </div>
