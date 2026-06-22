@@ -47,7 +47,11 @@ export default function LandingPage() {
             titleHighlight="Collection"
             description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits."
             primaryButton={{ text: "Shop Now", href: "#products" }}
-            items={[]}
+            secondaryButton={{ text: "Explore", href: "#features" }}
+            items={[
+              { imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=1" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg?_wi=1" }
+            ]}
           />
         </div>
 
@@ -115,7 +119,7 @@ export default function LandingPage() {
         <div id="footer" data-section="footer" data-webild-component="FooterSimple" data-webild-component-path="@/components/sections/footer/FooterSimple">
           <FooterSimple
             brand="Nabiha Collection"
-            columns={[{ title: "Links", items: [{ label: "Shop", href: "#products" }, { label: "About", href: "#about" }] }]}
+            columns={[{ title: "Links", items: [{ label: "Shop", href: "#products" }, { label: "About", href: "#" }] }]}
             copyright="© 2024 Nabiha Collection"
             links={[{ label: "Privacy Policy", href: "#" }]}
           />
