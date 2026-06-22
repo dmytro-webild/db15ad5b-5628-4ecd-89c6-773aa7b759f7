@@ -123,7 +123,6 @@ export default function LandingPage() {
   <div id="contact" data-section="contact">
       <ContactCTA
       tag="Contact Us"
-      heading="Get in Touch"
       primaryButton={{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }}
       secondaryButton={{ text: "Call Now", href: "tel:+923200387685" }}
     />
@@ -131,7 +130,6 @@ export default function LandingPage() {
 
   <div id="footer" data-section="footer">
       <FooterMedia
-      title="Nabiha Collection"
       copyright="© 2024 Nabiha Collection. All rights reserved."
       socialLinks={[
         { icon: "Instagram", href: "https://instagram.com/nabihacollection" },
