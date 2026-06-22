@@ -136,7 +136,7 @@ export default function LandingPage() {
       imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
       columns={[
         { title: "Quick Links", items: [{ label: "Products", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
-        { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
+        { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "/" }] }
       ]}
     />
   </div>
