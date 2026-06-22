@@ -30,7 +30,7 @@ export default function LandingPage() {
       <NavbarStyleFullscreen
       navItems={[
         { name: "Home", id: "hero" },
-        { name: "Collections", id: "features" },
+        { name: "Collections", id: "products" },
         { name: "Showcase", id: "video-showcase" },
         { name: "About", id: "about" },
         { name: "Contact", id: "contact" },
@@ -90,6 +90,7 @@ export default function LandingPage() {
       ]}
       title="Best Sellers"
       description="Explore our top-rated festive outfits."
+      primaryButton={{ text: "View Collection", href: "#products" }}
     />
   </div>
 
@@ -133,11 +134,11 @@ export default function LandingPage() {
 
   <div id="footer" data-section="footer">
       <FooterMedia
-      logoText="Nabiha Collection"
-      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
-      columns={[
-        { title: "Quick Links", items: [{ label: "Collections", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
-        { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
+      brand="Nabiha Collection"
+      copyright="© 2024 Nabiha Collection. All rights reserved."
+      socialLinks={[
+        { icon: "Instagram", href: "https://instagram.com/nabihacollection" },
+        { icon: "Facebook", href: "https://facebook.com/nabihacollection" }
       ]}
     />
   </div>
