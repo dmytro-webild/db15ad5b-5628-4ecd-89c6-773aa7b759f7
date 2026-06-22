@@ -5,7 +5,6 @@ import ReactLenis from "lenis/react";
 import { ShieldCheck, Package, RotateCcw, Award, Sparkles } from "lucide-react";
 import NavbarFullscreen from '@/components/ui/NavbarFullscreen';
 import HeroBillboardCreator from '@/components/sections/hero/HeroBillboardCreator';
-import AboutTestimonial from '@/components/sections/about/AboutTestimonial';
 import FeaturesGridSplit from '@/components/sections/features/FeaturesGridSplit';
 import FeaturesRevealCardsBento from '@/components/sections/features/FeaturesRevealCardsBento';
 import TestimonialDetailedCards from '@/components/sections/testimonial/TestimonialDetailedCards';
@@ -90,15 +89,6 @@ export default function LandingPage() {
               title: `Category ${i+1}`,
               description: "Premium embroidery design",              href: "#contact",              imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=2"
             }))}
-          />
-        </div>
-
-        <div id="about" data-section="about">
-          <AboutTestimonial
-            tag="Our Mission"
-            quote="We bring you curated fashion that reflects luxury and sophistication in every thread."
-            author="Nabiha"
-            role="Founder"
           />
         </div>
 
