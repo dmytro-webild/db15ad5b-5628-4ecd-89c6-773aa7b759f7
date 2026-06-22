@@ -145,3 +145,8 @@ export default function LandingPage() {
     </ThemeProvider>
   );
 }
+"
+    }
+  ],
+  "rawPlan": "I have updated the navigation links to ensure all menu items and buttons correctly reference the intended section anchors or external URLs. Navigation items now use 'href' keys to ensure they are functional."
+}
