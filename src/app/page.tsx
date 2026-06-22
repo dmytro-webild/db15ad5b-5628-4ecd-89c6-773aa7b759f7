@@ -2,7 +2,6 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { ShieldCheck, Package, RotateCcw } from "lucide-react";
 import NavbarFullscreen from '@/components/ui/NavbarFullscreen';
 import HeroBillboardCreator from '@/components/sections/hero/HeroBillboardCreator';
 import AboutTestimonial from '@/components/sections/about/AboutTestimonial';
@@ -11,7 +10,6 @@ import FeaturesRevealCardsBento from '@/components/sections/features/FeaturesRev
 import TestimonialDetailedCards from '@/components/sections/testimonial/TestimonialDetailedCards';
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterSimple from '@/components/sections/footer/FooterSimple';
-import FeaturesLogos from '@/components/sections/features/FeaturesLogos';
 
 export default function LandingPage() {
   return (
@@ -51,17 +49,6 @@ export default function LandingPage() {
             note="Free delivery on orders over PKR 10,000"
             badgeText="New Arrivals"
             videos={[]}
-          />
-        </div>
-
-        <div id="trust-signals" data-section="features" data-webild-component="FeaturesLogos" data-webild-component-path="@/components/sections/features/FeaturesLogos">
-          <FeaturesLogos
-            title="Why Shop With Us"
-            items={[
-                { icon: ShieldCheck, title: "Secure Payments", description: "Shop with confidence" },
-                { icon: Package, title: "100% Original", description: "Authentic luxury fabrics" },
-                { icon: RotateCcw, title: "Easy Returns", description: "Hassle-free exchange policy" }
-            ]}
           />
         </div>
 
