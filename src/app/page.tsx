@@ -2,15 +2,14 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import { Sparkles, Zap, Star, Award, MessageCircle } from 'lucide-react';
-import ContactCTA from '@/components/sections/contact/ContactCTA';
-import FeatureCardTwentyEight from '@/components/sections/feature/FeatureCardTwentyEight';
-import FooterMedia from '@/components/sections/footer/FooterMedia';
-import HeroSplit from '@/components/sections/hero/HeroSplit';
-import MetricSplitMediaAbout from '@/components/sections/about/MetricSplitMediaAbout';
-import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
-import ProductCardThree from '@/components/sections/product/ProductCardThree';
-import TestimonialCardSixteen from '@/components/sections/testimonial/TestimonialCardSixteen';
+import NavbarFullscreen from '@/components/ui/NavbarFullscreen';
+import HeroBillboardCreator from '@/components/sections/hero/HeroBillboardCreator';
+import AboutTestimonial from '@/components/sections/about/AboutTestimonial';
+import FeaturesGridSplit from '@/components/sections/features/FeaturesGridSplit';
+import FeaturesRevealCardsBento from '@/components/sections/features/FeaturesRevealCardsBento';
+import TestimonialDetailedCards from '@/components/sections/testimonial/TestimonialDetailedCards';
+import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
+import FooterSimple from '@/components/sections/footer/FooterSimple';
 
 export default function LandingPage() {
   return (
@@ -27,121 +26,99 @@ export default function LandingPage() {
         headingFontWeight="extrabold"
     >
       <ReactLenis root>
-  <div id="nav" data-section="nav">
-      <NavbarStyleFullscreen
-      navItems={[
-        { name: "Home", id: "hero" },
-        { name: "Collections", id: "features" },
-        { name: "Showcase", id: "video-showcase" },
-        { name: "About", id: "about" },
-        { name: "Contact", id: "contact" },
-      ]}
-      brandName="Nabiha Collection"
-    />
-  </div>
+        <div id="nav" data-section="nav">
+          <NavbarFullscreen
+            logo="Nabiha Collection"
+            navItems={[
+              { name: "Home", href: "#hero" },
+              { name: "Products", href: "#products" },
+              { name: "Features", href: "#features" },
+              { name: "Contact", href: "#contact" }
+            ]}
+            ctaButton={{ text: "Order Now", href: "https://wa.me/923200387685" }}
+          />
+        </div>
 
-  <div id="hero" data-section="hero">
-      <HeroSplit
-      background={{ variant: "gradient-bars" }}
-      title="Nabiha Collection"
-      description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits tailored for the modern woman."
-      buttons={[{ text: "Shop Now", href: "#products" }, { text: "WhatsApp Order", href: "https://wa.me/923200387685" }]}
-      imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_3DhmeqNYcKFk9iaiQabHUYs5vAe/uploaded-1779017205062-palci8t4.png"
-      imagePosition="right"
-    />
-  </div>
+        <div id="hero" data-section="hero">
+          <HeroBillboardCreator
+            tag="Premium Quality"
+            title="Nabiha"
+            titleHighlight="Collection"
+            description="Timeless elegance meets luxury. Discover our premium embroidered 3-piece suits."
+            primaryButton={{ text: "Shop Now", href: "#products" }}
+            note="Free delivery on orders over PKR 10,000"
+            badgeText="New Arrivals"
+            videos={[]}
+          />
+        </div>
 
-  <div id="video-showcase" data-section="video-showcase">
-      <MetricSplitMediaAbout
-      useInvertedBackground={false}
-      title="Our Craft in Motion"
-      description="Watch our master artisans at work and see the fine details of our latest embroidery collections."
-      videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
-      metrics={[]}
-      mediaAnimation="slide-up"
-    />
-  </div>
+        <div id="features" data-section="features">
+          <FeaturesGridSplit
+            tag="Our Features"
+            title="Why Choose Us"
+            description="Exquisite craftsmanship combined with modern design aesthetics."
+            topItems={[
+              { title: "Handcrafted", description: "Premium embroidery detailing", imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg" },
+              { title: "Lawn Comfort", description: "High quality breathable fabric", imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg" }
+            ]}
+            bottomItem={{
+              title: "Festive Collection",              description: "Luxury gold accents for special occasions.",              primaryButton: { text: "View Gallery", href: "#products" },
+              imageSrc: "http://img.b2bpic.net/free-photo/young-woman-lying-yellow-cloth-nature_23-2148170289.jpg"
+            }}
+          />
+        </div>
 
-  <div id="features" data-section="features">
-      <FeatureCardTwentyEight
-      animationType="slide-up"
-      textboxLayout="default"
-      useInvertedBackground={false}
-      features={[
-        { id: "1", title: "Handcrafted Detail", subtitle: "Premium Quality", category: "Embroidery", value: "Masterpiece" },
-        { id: "2", title: "Premium Lawn", subtitle: "Soft Feel", category: "Fabric", value: "Comfort" },
-        { id: "3", title: "Gold Accents", subtitle: "Festive Shine", category: "Details", value: "Luxury" },
-        { id: "4", title: "Modern Cuts", subtitle: "Tailored Fit", category: "Design", value: "Contemporary" },
-      ]}
-      title="Featured Embroidery"
-      description="Exquisite craftsmanship meets sophisticated design in our new festive collection."
-    />
-  </div>
+        <div id="products" data-section="products">
+          <FeaturesRevealCardsBento
+            tag="Catalogue"
+            title="Product Categories"
+            description="Explore our curated collection of festive lawn outfits."
+            items={Array(7).fill(0).map((_, i) => ({
+              title: `Category ${i+1}`,
+              description: "Premium embroidery design",              href: "#contact",              imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg"
+            }))}
+          />
+        </div>
 
-  <div id="products" data-section="products">
-      <ProductCardThree
-      animationType="slide-up"
-      textboxLayout="default"
-      gridVariant="three-columns-all-equal-width"
-      useInvertedBackground={true}
-      products={[
-        { id: "1", name: "Royal Gold Suit", price: "PKR 8,500", imageSrc: "http://img.b2bpic.net/free-photo/close-up-dress-with-paisley-pattern_23-2148237605.jpg?_wi=2" },
-        { id: "2", name: "Midnight Lawn", price: "PKR 7,200", imageSrc: "http://img.b2bpic.net/free-photo/stylish-businesswoman-walking-posing_1328-600.jpg?_wi=2" },
-        { id: "3", name: "Beige Elegance", price: "PKR 6,900", imageSrc: "http://img.b2bpic.net/free-photo/young-woman-lying-yellow-cloth-nature_23-2148170289.jpg" },
-      ]}
-      title="Best Sellers"
-      description="Explore our top-rated festive outfits."
-    />
-  </div>
+        <div id="about" data-section="about">
+          <AboutTestimonial
+            tag="Our Mission"
+            quote="We bring you curated fashion that reflects luxury and sophistication in every thread."
+            author="Nabiha"
+            role="Founder"
+          />
+        </div>
 
-  <div id="about" data-section="about">
-      <MetricSplitMediaAbout
-      useInvertedBackground={true}
-      title="About Nabiha Collection"
-      description="Inspired by the grace and beauty of Pakistani heritage, we bring you curated fashion that reflects luxury and sophistication in every thread."
-      metrics={[{ value: "500+", title: "Happy Customers" }, { value: "100%", title: "Quality Assured" }]}
-      mediaAnimation="slide-up"
-      imageSrc="http://img.b2bpic.net/free-photo/business-owners-preparing-their-store_23-2149300867.jpg"
-    />
-  </div>
+        <div id="testimonials" data-section="testimonials">
+          <TestimonialDetailedCards
+            tag="Testimonials"
+            title="What Our Clients Say"
+            description="Read stories from our happy customers."
+            testimonials={[
+              { title: "Amazing quality", quote: "The embroidery is stunning and the fabric is so soft.", name: "Fatima Zahra", role: "Designer", imageSrc: "http://img.b2bpic.net/free-photo/smiling-young-brunette-caucasian-girl-puts-hand-waist-thumbs-up-isolated-green-background-with-copy-space_141793-67070.jpg" }
+            ]}
+          />
+        </div>
 
-  <div id="testimonials" data-section="testimonials">
-      <TestimonialCardSixteen
-      animationType="slide-up"
-      textboxLayout="default"
-      useInvertedBackground={false}
-      testimonials={[
-        { id: "t1", name: "Fatima Zahra", role: "Designer", company: "Client", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/smiling-young-brunette-caucasian-girl-puts-hand-waist-thumbs-up-isolated-green-background-with-copy-space_141793-67070.jpg" },
-        { id: "t2", name: "Ayesha Khan", role: "Doctor", company: "Client", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/internationals-people-standing-cafe-with-shopping-bags_1157-31458.jpg" },
-        { id: "t3", name: "Sana Ahmed", role: "Manager", company: "Client", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/medium-shot-smiley-women-with-clothes_23-2149241337.jpg" },
-      ]}
-      kpiItems={[{ value: "4.9", label: "Rating" }, { value: "99%", label: "Satisfaction" }, { value: "24/7", label: "Support" }]}
-      title="What Our Clients Say"
-      description="Experience of elegance through our customers' eyes."
-    />
-  </div>
+        <div id="contact" data-section="contact">
+          <ContactSplitForm
+            tag="Connect"
+            title="Get in Touch"
+            description="Have questions or need styling advice? Send us a message."
+            inputs={[{ name: "name", type: "text", placeholder: "Full Name" }, { name: "email", type: "email", placeholder: "Email Address" }]}
+            buttonText="Send Message"
+            imageSrc="http://img.b2bpic.net/free-photo/business-owners-preparing-their-store_23-2149300867.jpg"
+          />
+        </div>
 
-  <div id="contact" data-section="contact">
-      <ContactCTA
-      tag="Contact Us"
-      title="Get in Touch"
-      description="Have questions or need styling advice? We are here to help."
-      buttons={[{ text: "WhatsApp Us", href: "https://wa.me/923200387685" }, { text: "Call Now", href: "tel:+923200387685" }]}
-      background={{ variant: "gradient-bars" }}
-      useInvertedBackground={true}
-    />
-  </div>
-
-  <div id="footer" data-section="footer">
-      <FooterMedia
-      logoText="Nabiha Collection"
-      imageSrc="http://img.b2bpic.net/free-photo/attractive-young-blond-woman-with-flower-wreath-head_23-2148079355.jpg?_wi=1"
-      columns={[
-        { title: "Quick Links", items: [{ label: "Collections", href: "#products" }, { label: "About Us", href: "#about" }, { label: "Contact", href: "#contact" }] },
-        { title: "Support", items: [{ label: "WhatsApp Help", href: "https://wa.me/923200387685" }, { label: "Privacy Policy", href: "#" }] }
-      ]}
-    />
-  </div>
+        <div id="footer" data-section="footer">
+          <FooterSimple
+            brand="Nabiha Collection"
+            columns={[{ title: "Links", items: [{ label: "Shop", href: "#products" }, { label: "About", href: "#about" }] }]}
+            copyright="© 2024 Nabiha Collection"
+            links={[{ label: "Privacy Policy", href: "#" }]}
+          />
+        </div>
       </ReactLenis>
     </ThemeProvider>
   );
